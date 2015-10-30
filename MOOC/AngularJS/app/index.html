@@ -1,0 +1,44 @@
+<!--  Pros: single page web, template engines, handling DOM, data manipulation
+ features: MVC architecture, directives, data-binding, filters, modules, routes
+ img uses ng-src instead of src -->
+<!doctype html>
+<!-- ng-app is a directive -->
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Try AngularJS</title>
+    <script src="js/lib/Angular/angular.min.js"></script>
+    <script src="js/lib/Angular/angular-route.min.js"></script>
+
+    <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
+
+    <script src="js/app.js"></script>   
+    <script src="js/controller.js"></script>
+    <script src="js/services/authentication.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav ng-controller="StatusController" ng-include="'partials/navbar.html'"></nav>
+
+        <div class="userinfo" ng-controller="StatusController" ng-show="currentUser">
+            <span class="user">Hi {{currentUser.username}}</span>
+            <a href="#" ng-click="logout()">Logout</a>
+            <hr>
+        </div>
+    </header>
+
+    
+
+    <div>
+        <!-- two-way data binding -->
+        <input type="text" ng-model="name">
+        <h1>Welcome {{name}}</h1>
+    </div>
+
+    <div class="mainSection" ng-view></div>
+
+</body>
+</html>

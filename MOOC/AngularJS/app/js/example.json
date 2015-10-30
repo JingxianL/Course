@@ -1,0 +1,68 @@
+[
+    {
+        "instruction": "Open"
+    },
+    {
+        "instruction": "OpenNew",
+        "description": "Open New"
+    },
+    {
+        "instruction": "ZoomIn",
+        "description": "Zoom In"
+    },
+    {
+        "instruction": "ZoomOut",
+        "description": "Zoom Out"
+    },
+    {
+        "instruction": "OriginalView",
+        "description": "Original View"
+    },
+    {
+        "instruction": "Quality"
+    },
+    {
+        "instruction": "Pause"
+    },
+    {
+        "instruction": "Mute"
+    },
+    {
+        "instruction": "Find",
+        "description": "Find..."
+    },
+    {
+        "instruction": "FindAgain",
+        "description": "Find Again"
+    },
+    {
+        "instruction": "Copy"
+    },
+    {
+        "instruction": "CopyAgain",
+        "description": "Copy Again"
+    },
+    {
+        "instruction": "CopySVG",
+        "description": "Copy SVG"
+    },
+    {
+        "instruction": "ViewSVG",
+        "description": "View SVG"
+    },
+    {
+        "instruction": "ViewSource",
+        "description": "View Source"
+    },
+    {
+        "instruction": "SaveAs",
+        "description": "Save As"
+    },
+    {
+        "instruction": "Help"
+    },
+    {
+        "instruction": "About",
+        "description": "About xProgress CVG Viewer..."
+    } 
+]

@@ -1,0 +1,28 @@
+<section class="dashboard">
+	<div ng-hide="signedIn()" class="sorry">
+		<p>Please <a ng-href="#/register">Sign Up</a> Or <a ng-href="#/login">Sign In</a></p>
+	</div>
+
+	<div ng-show="signedIn()" class="showDashboard">
+		<h1 ng-if="contentNum>0">My Dashboard</h1>
+		<div class="dashboard-content" ng-repeat="(key, content) in userDashboard">
+			<button ng-click="deleteContent(key)">-</button>
+			<p>{{content.name}}</p>
+		</div>
+
+		<h1>Add Content</h1>
+		<form class="dashboard-addContent"
+			  name="newContentForm"
+			  ng-submit="addContent()"
+			  novalidate>
+
+			<input type="text" name="name" placeholder="Name" autofocus ng-model="contentName" ng-required="true">
+
+			<input type="text" name="description" placeholder="Description" autofocus ng-model="contentDescription" ng-required="true">
+
+			<button type="submit">+</button>
+		</form>
+	</div>
+
+
+</section>
